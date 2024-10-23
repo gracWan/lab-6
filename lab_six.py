@@ -1,7 +1,14 @@
 def encode(to_encode): #Grace Wang
     holder = ""
     for i in to_encode:
-        holder +=str(int(i)+3)
+        if i == "7":
+            holder += "0"
+        elif i == "8":
+            holder += "1"
+        elif i == "9":
+            holder += "2"
+        else:
+            holder +=str(int(i)+3)
     print("Your password has been encoded and stored!")
     return holder
 
